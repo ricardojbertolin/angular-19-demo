@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { DragPan } from 'ol/interaction';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
@@ -10,4 +11,8 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 })
 export class AppComponent {
   title = 'angular-demo';
+
+  constructor() {
+    const dragPan: DragPan = new DragPan();
+  }
 }
